@@ -1,0 +1,172 @@
+<!--先調顏色，再邊框尺寸，最後內容-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>S07351003_Web_Final</title>
+    <link rel="stylesheet" type="text/css" href="./css/final.css">
+    <!--導入 bootstrap -->
+    <!-- Bootstrap CSS 官網 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+</head>
+<body>   
+    <!-- 標題 header -->
+    <div class="header">
+        <h1 class="header-h1">Web 程式設計 － 記帳系統</h1>
+    </div>
+
+    <!-- 左邊選單 side bar left -->
+    <div class="leftbar">
+        <!-- bootstrap-button -->
+        <hr class="leftbar-hr">
+        <button type="button" class="leftbar-btn btn btn-primary" onclick="location.href='./home.html'">上一頁</button>
+        <hr class="leftbar-hr">
+        <button type="button" class="leftbar-btn btn btn-primary">記帳</button>
+        <hr class="leftbar-hr">
+        <button type="button" class="leftbar-btn btn btn-primary">日曆</button>
+        <hr class="leftbar-hr">
+        <button type="button" class="leftbar-btn btn btn-primary">統計</button>
+        <hr class="leftbar-hr">
+        <button type="button" class="leftbar-btn btn btn-primary">總覽</button>
+        <hr class="leftbar-hr">
+        <button type="button" class="leftbar-btn btn btn-primary">搜尋</button>
+        <hr class="leftbar-hr">
+        <button type="button" class="leftbar-btn btn btn-primary">設定</button>
+    </div>
+
+    <!-- 內容 content -->
+    <div class="content">
+        <!-- 上方內容 Upper content -->
+        <div style="width: auto; height: 25vh;">
+            <div class="pie"></div>     <!-- 圓餅圖 -->
+            <div class="pie-col">       <!-- 圓餅圖欄位 -->
+                <!-- bootstrap-tables 表格 -->
+                <table>
+                    <tr class="table-dark">
+                        <th>類別</th>
+                        <th>金額</th>
+                    </tr>       <!-- 用官網的莫名沒有顏色 -->
+                    <tr class="table-primary">
+                        <td class="table-primary" style="background-color:#A8D0F4;">吃飯</td>
+                        <td class="table-primary" style="background-color:#A8D0F4;">$1000</td>
+                    </tr>
+                    <tr class="table-secondary">
+                        <td class="table-secondary" style="background-color:#D9D8D9;">交通</td>
+                        <td class="table-secondary" style="background-color:#D9D8D9;">$2000</td>
+                    </tr>
+                    <tr class="table-success">
+                        <td class="table-success" style="background-color:#CEF6D8;">居家</td>
+                        <td class="table-success" style="background-color:#CEF6D8;">$3000</td>
+                    </tr>
+                    <tr class="table-danger">
+                        <td class="table-danger" style="background-color:#F6CECE;"> 衣服</td>
+                        <td class="table-danger" style="background-color:#F6CECE;">$4000</td>
+                    </tr>
+                    <tr class="table-warning">
+                        <td class="table-warning" style="background-color:#F4EDCE;">運動</td>
+                        <td class="table-warning" style="background-color:#F4EDCE;">$5000</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <hr style="background-color: #A5A5A4; border: 1px solid #A5A5A4; width:100%; margin-top: 10px;">
+        
+        <!-- 下方內容 Below content -->
+        <div style="width: 100%; height: 60vh; padding: 0%;">
+            <!-- 下方內容 - 左半 -->
+            <!-- bootstrap-Grid 網格 -->
+            <div class="total-property container" style="border-right: 1px solid black; width: 75%; float: left;">
+                <form>
+                    <!-- bootstrap-Button group 按鈕群組 -->
+                    <div class="btn-group" role="group" aria-label="Basic example" style="margin-bottom: 10px;">
+                        <button type="submit" class="btn btn-primary" onclick="">新增</button>
+                        <button type="button" class="btn btn-primary">刪除</button>
+                        <button type="reset" class="btn btn-primary">清除</button>
+                    </div>
+                    <!-- bootstrap-Grid 網格標題 -->
+                    <div class="row" style="margin-right: 5px;">
+                        <div class="history col col-lg-2" >選擇</div>
+                        <div class="history col">類別</div>
+                        <div class="history col">金額</div>
+                        <div class="history col">日期</div>
+                    </div>
+                    <div class="row" style="margin-right: 5px;">
+                        <!-- bootstrap核取方塊 -->
+                        <div class="history col col-lg-2">
+                            <input class="form-check-input" type="checkbox" name="" value="">
+                        </div>
+                        <div class="history col">
+                            <select>
+                                <option>選擇類別</option>
+                                <option>吃飯</option>
+                                <option>交通</option>
+                                <option>居家</option>
+                                <option>衣服</option>
+                                <option>運動</option>
+                            </select>
+                        </div>
+                        <!-- 輸入金額 -->
+                        <div class="history col">
+                            <input type="text" placeholder="輸入金額$（臺幣）" style="width: fit-content; height: 30px;">
+                        </div>
+                        <!-- 消費時間 -->
+                        <div class="history col">
+                            <input type="date" style="width: fit-content; height: 30px;">
+                        </div>
+
+                        <!-- 消費時間 
+                        <div class="history col">
+                            <div class="row">
+                                <div class='col-sm-6'>
+                                    <div class="form-group">
+                                        <div class='input-group date' id='datetimepicker2'>
+                                            <input type='text' class="form-control" />
+                                            <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>              
+                        </div>-->
+                    </div>
+                </form>
+                <!-- bootstrap-Pagination 分頁 -->
+                <nav aria-label="Page navigation example" style="margin-top: 10px;">
+                    <ul class="pagination">
+                      <li class="page-item"><a class="page-link" href="#">上一頁</a></li>
+                      <li class="page-item"><a class="page-link" href="#">1</a></li>
+                      <li class="page-item"><a class="page-link" href="#">2</a></li>
+                      <li class="page-item"><a class="page-link" href="#">3</a></li>
+                      <li class="page-item"><a class="page-link" href="#">下一頁</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <!--
+            <script type="text/javascript">
+                $(function() {
+                    $('#datetimepicker1').datetimepicker({
+                        format: 'YYYY-MM-DD',
+                        locale: moment.locale('zh-cn')
+                    });
+                    $('#datetimepicker2').datetimepicker({
+                        format: 'YYYY-MM-DD hh:mm',
+                        locale: moment.locale('zh-cn')
+                    });
+                });
+            </script>
+            -->
+            <!-- 下方內容 - 右半 -->
+            <div class="total-property container" style="width:25%; float: left;">
+                <div class="show-property" style="background-color:#F7809E;">總支出：</div>
+                <div class="show-property" style="background-color:#9FF680;">總收入：</div>
+                <div class="show-property" style="background-color:#6E6F6F; color: white;">總資產：</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 引用 bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js" integrity="sha384-lpyLfhYuitXl2zRZ5Bn2fqnhNAKOAaM/0Kr9laMspuaMiZfGmfwRNFh8HlMy49eQ" crossorigin="anonymous"></script>
+</body>
+</html>
